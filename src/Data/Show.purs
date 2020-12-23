@@ -21,8 +21,8 @@ instance showBoolean :: Show Boolean where
   show true = "true"
   show false = "false"
 
-instance showInt :: Show Int where
-  show = showIntImpl
+-- instance showInt :: Show Int where
+--   show = showIntImpl
 
 instance showNumber :: Show Number where
   show = showNumberImpl
@@ -62,7 +62,7 @@ instance showRecordFieldsCons
       focus = unsafeGet key record :: focus
       tail = showRecordFields (RLProxy :: RLProxy rowlistTail) record
 
-foreign import showIntImpl :: Int -> String
+-- foreign import showIntImpl :: Int -> String
 foreign import showNumberImpl :: Number -> String
 foreign import showCharImpl :: Char -> String
 foreign import showStringImpl :: String -> String
