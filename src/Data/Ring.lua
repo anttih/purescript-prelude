@@ -1,7 +1,7 @@
 
 local function intSub(x)
   return function (y)
-    return x - y
+    return bit.bor(x - y, 0)
   end
 end
 
